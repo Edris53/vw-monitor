@@ -4,7 +4,7 @@ import smtplib
 import requests
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSouph
 from datetime import datetime
 
 TARGET_URL   = "https://www.volkswagen-dubai.com/en.html"
@@ -75,8 +75,7 @@ def main():
         print("Baseline saved.")
         return
     if current_hash == snapshot["hash"]:
-        print(f"No change detected (matches snapshot from {snapshot['timestamp']})")
-        return
+        print(f"No change detected but sending test email anyway...")
     print("CHANGE DETECTED!")
     subject = f"[VW Monitor] Website change detected - {now}"
     body = (
