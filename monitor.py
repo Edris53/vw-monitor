@@ -4,7 +4,7 @@ import smtplib
 import requests
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from bs4 import BeautifulSouph
+from bs4 import BeautifulSoup
 from datetime import datetime
 
 TARGET_URL   = "https://www.volkswagen-dubai.com/en.html"
