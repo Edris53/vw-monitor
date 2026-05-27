@@ -75,7 +75,8 @@ def main():
         print("Baseline saved.")
         return
     if current_hash == snapshot["hash"]:
-        print(f"No change detected but sending test email anyway...")
+        print(f"No change detected (matches snapshot from {snapshot['timestamp']})")
+        return
     print("CHANGE DETECTED!")
     subject = f"[VW Monitor] Website change detected - {now}"
     body = (
